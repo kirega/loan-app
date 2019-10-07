@@ -1,27 +1,34 @@
-# TulaaLoans
+# Loans App
+
+At the moment this project depends on this [backend](https://github.com/kirega/loan-api) repository to run, 
+work is in progress to make it independent.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.2.
+If you do not have angular already installed, run this command:
 
-## Development server
+```npm install -g @angular/cli```
+## Clone this project
+First, get a copy of project by running this command.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`git clone https://github.com/kirega/loan-app.git`
 
-## Code scaffolding
+ then change into this directory 
+ 
+ `cd loan-app`
+ 
+## Install Dependencies
+Once in the loan-app execute this command:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+`npm install`
 
-## Build
+## Running the server
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+After all dependencies have successfully installed, start the server by running
 
-## Running unit tests
+`npm start` or `ng serve`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+The server should at this url `http://localhost:4200`. 
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
+Navigate to this url on your browser to access your reports.
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
