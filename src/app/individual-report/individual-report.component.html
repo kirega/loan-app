@@ -1,0 +1,27 @@
+<div class="officer-grid">
+  <div class="officers">
+    <span class="title">Loan Officers<label>(click on a name for details)</label></span>
+
+    <p *ngFor="let officer of officers" (click)="selectedOfficer(officer.id)">
+      {{ officer.first_name }} {{ officer.last_name }}
+    </p>
+  </div>
+  <div class="details" >
+    <app-spinner *ngIf="isGettingDetails"></app-spinner>
+    <div *ngIf="!isGettingDetails && officerLoan">
+      <h4>Agent: {{officerLoan.first_name}} {{officerLoan.last_name}}</h4>
+    </div>
+    <app-cards *ngIf="!isGettingDetails && officerLoan"
+               [outstanding]="officerLoan.outstanding"
+               [overdue]="officerLoan.overdue"
+               [portfolio]="officerLoan.portfolio"
+    ></app-cards>
+    <app-charts
+      *ngIf="!isGettingDetails && officerLoan"
+      [data]="[officerLoan.outstanding, officerLoan.overdue]"
+      [labels]="['outstanding', 'overdue']"
+      title="Agent Anaylsis: Outstanding loans vs overdue loans"
+      type="doughnut"
+    ></app-charts>
+  </div>
+</div>

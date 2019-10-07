@@ -1,0 +1,12 @@
+<div class="card bg-yellow" (click)="choose(portfolioObj)">
+  <span class="card-value">ksh {{portfolio}}</span>
+  <p class="card-title">Total Loan Portfolio</p>
+</div>
+<div class="card bg-blue" (click)="choose(outstandingObj)">
+  <span class="card-value">ksh {{ outstanding }}</span>
+  <p class="card-title">Total Outstanding Loan </p>
+</div>
+<div class="card bg-red" (click)="choose(overdueObj)">
+  <span class="card-value">ksh {{overdue}}</span>
+  <p class="card-title">Portfolio At Risk</p>
+</div>

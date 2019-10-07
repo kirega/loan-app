@@ -1,0 +1,33 @@
+<div class="officer-charts">
+  <div>
+    <app-charts
+      *ngIf="!isGettingLoans"
+      [data]="mapData(loans,'portfolio', false)"
+      [labels]="mapData(loans,'first_name', true)"
+      title="Loan Portfolio By Agent: Summary of All loans Awarded"
+      type="pie"
+    ></app-charts>
+  </div>
+  <div>
+    <app-charts
+      *ngIf="!isGettingLoans"
+      [data]="mapData(loans,'outstanding', false)"
+      [labels]="mapData(loans,'first_name', true)"
+      title="'Loans Outstanding by Agents: Summary of All loans Unpaid"
+      type="pie"
+    >
+    </app-charts>
+  </div>
+  <div>
+    <app-charts
+      *ngIf="!isGettingLoans"
+      [data]="mapData(loans,'portfolio', false)"
+      [labels]="mapData(loans,'first_name', true)"
+      title="Loans Overdue by Agents: Summary of All Loans At Risk"
+      type="pie"
+    >
+    </app-charts>
+  </div>
+</div>
+
+

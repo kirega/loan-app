@@ -1,0 +1,40 @@
+.officer-grid {
+  display: grid;
+  grid-template-columns: 20% auto;
+  grid-gap: 10px;
+}
+.officers {
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 6px 15px 0px rgba(69, 65, 78, 0.1);
+  -moz-box-shadow: 2px 6px 15px 0px rgba(69, 65, 78, 0.1);
+  box-shadow: 2px 6px 15px 0px rgba(69, 65, 78, 0.1);
+}
+.officers p{
+  padding: 10px 20px;
+  margin: 0px;
+  margin-bottom: 3px;
+}
+.officers p:hover{
+  background-color: #efefef;
+}
+.title {
+  display: block;
+  color: #F2B134;
+  background-color: #112f41;
+  font-size: 1rem;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 600 ;
+  font-family: "Roboto", 'sans-serif';
+  text-space: 1px;
+}
+.title label{
+  display: block;
+  margin: 1px;
+  font-size: 12px;
+  font-weight: 100;
+  text-transform: none;
+  padding: 0px;
+}

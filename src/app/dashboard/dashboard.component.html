@@ -1,0 +1,35 @@
+<ng-container *ngIf="!isLoading">
+  <app-cards
+    [outstanding]="outstanding.total"
+    [overdue]="overdue.total"
+    [portfolio]="portfolio.total"
+    (selected)="selectReport($event)"
+  ></app-cards>
+</ng-container>
+<div class="chart-container">
+  <div class="wrapper">
+    <app-charts
+      *ngIf="!isLoading"
+      [data]="data"
+      [labels]="labels"
+      [title]="title"
+    ></app-charts>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of loans">
+        <td>{{ item.id }}</td>
+        <td>{{item.first_name}} {{ item.last_name }}</td>
+        <td>{{item[key]}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

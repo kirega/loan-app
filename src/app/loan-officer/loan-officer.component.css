@@ -1,0 +1,9 @@
+
+.officer-charts{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 0px;
+}
+.officer-charts div{
+
+}
